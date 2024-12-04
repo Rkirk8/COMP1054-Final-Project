@@ -1,0 +1,21 @@
+/* --------------------------------COLORS---------------------------------
+DARKEST
+    #0c202c--dark navy blue
+    #194158--navy blue
+    #256284--light navy blue
+    #3283b0--blue
+    #4e9fcc--light blue
+    #7ab7d9--ski blue
+    #a6cfe5--light ski blue
+    #d2e7f2--almost white
+LIGHTEST
+*/
+
+/* --------------------------------FONTS---------------------------------
+
+
+*/
+body {
+    background-color: #0c202c;
+    color: #d2e7f2;
+}
