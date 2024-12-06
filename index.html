@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Peak Skis and Snowboards - Your one-stop shop for all skiing and snowboarding needs.">
-    <title>Peak Skis and Snowboards</title>
+    <meta name="description" content="Peak Skis and Boards - Your one-stop shop for all skiing and Boarding needs.">
+    <title>Peak Skis and Boards</title>
     <!-- CSS -->
      <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Knewave&family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="HeadNav">
             <!--Logo-->
             <div class="headLogo">
-                <a href="index.html"><img src="img/PeakLogo.svg" alt="Peak Skis and Snowboards Logo"></a>
+                <a href="index.html"><img src="img/PeakLogo.svg" alt="Peak Skis and Boards Logo"></a>
             </div>
             <!--Navigation-->
             <menu>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="Shop.html">Shop</a></li>
                 </ul>
             </menu>
         </nav>
@@ -30,50 +32,52 @@
     <main id="home-main-content">
         <!--Hero Section-->
         <section class="hero">
-            <h1>Welcome to  PeakSki & Snowboards </h1>
-            <p>Your one-stop shop for all skiing and snowboarding needs.</p>
-        </section>
+            <div class="mask">
+                <h1>Welcome to  Peak Ski & Boards </h1>
+                <p>Your one-stop shop for all skiing and snowboarding needs.</p>
+            </div>
+        </section> 
 
         <!--Featured Products Section-->
         <section class="featuredProducts">
             <h2>Featured Products</h2>
             <div class="productGrid">
 
-                
-                    <div class="wizardStick">
+                <div class="wizardStick">
+                    <a href="products/wizard-stick.html">
                         <div class ="product-thumb">
-                            <a href="products/wizard-stick.html"><img src="img/Wizard_Stick-Snowboard-768x768.jpg" alt="Dinosaurs Will Die Wizard Stick Snowboard"></a>
+                            <img src="img/Wizard_Stick-Snowboard-768x768.jpg" alt="Dinosaurs Will Die Wizard Stick Snowboard">
                         </div>
                         <div class="product-details">
                             <h3>Dinosaurs Will Die : Wizard Stick</h3>
                             <p>$599.99</p>
                         </div>
-                    </div>
-                
+                    </a>
+                </div>
 
-                
-                    <div class="powReaper">
+                <div class="powReaper">
+                    <a href="products/pow-reaper-pale-horse.html">
                         <div class ="product-thumb">
-                            <a href="products/pow-reaper-pale-horse.html"><img src="img/Pow_Reaper-Snowboard-768x768.jpg" alt='Dinosaurs Will Die Pow Reaper "Pale Horse" Snowboard'></a>
+                            <img src="img/Pow_Reaper-Snowboard-768x768.jpg" alt='Dinosaurs Will Die Pow Reaper "Pale Horse" Snowboard'>
                         </div>
                         <div class="product-details">
                             <h3>Dinosaurs Will Die : Pow Reaper "Pale Horse"</h3>
                             <p>$639.99</p>
                         </div>
-                    </div>
-                
+                    </a>
+                </div>
 
-                
-                    <div class="mindBender">
+                <div class="mindBender">
+                    <a href="products/mind-bender.html">
                         <div class ="product-thumb">
-                            <a href="products/mind-bender.html"><img src="img/k2-mindbender-376x904.jpg" alt="K2 Mindbender Free Ride Skis"></a>
+                            <img src="img/k2-mindbender-376x904.jpg" alt="K2 Mindbender Free Ride Skis">
                         </div>
                         <div class="product-details">
                             <h3>K2 : Mindbender</h3>
                             <p>$599.99</p>
                         </div>
-                    </div>
-                
+                    </a>
+                </div>
 
             </div>
         </section>
@@ -81,7 +85,8 @@
         <!--About Section-->
         <section class="about">
             <h2>About Us</h2>
-            <p>We are passionate about skiing and snowboarding. Our mission is to provide the best equipment and apparel to help you enjoy your time on the slopes.</p>
+            <p>Welcome to Peak Ski & Boards, your ultimate destination for all things skiing and snowboarding! Nestled in the heart of Snowtown, we are passionate about winter sports and dedicated to providing our customers with top-quality gear, apparel, and accessories. Whether you are a seasoned pro or just starting out, our knowledgeable staff is here to help you find the perfect equipment to enhance your mountain adventures. At Peak Ski & Boards, we believe in offering exceptional service, expert advice, and a wide range of products to suit every budget and skill level. Join us and experience the thrill of the slopes with confidence and style!</p>
+            <a href="about.html"><button class="btn">Learn More</button></a>
         </section>
 
         <!--Newsletter Section-->
@@ -96,13 +101,17 @@
 
         <!--Footer Section-->
         <footer>
+            <div class="ft-logo">
+                <a href="index.html"><img src="img/PeakLogo.svg" alt="Peak Skis and Boards Logo"></a>
+            </div>
             <div class="storeInfo">
                 <h3>Store Location</h3>
-
+                <p>123 Mountain Road, Snowtown</p>
             </div>
             <div class="contact">
                 <h3>Contact Us</h3>
-
+                <p>Email: info@peakskisnowboards.com</p>
+                <p>Phone: 123-456-7890</p>
             </div>
             <p>&copy; 2023 PeakSkis and Snowboards. All rights reserved.</p>
         </footer>

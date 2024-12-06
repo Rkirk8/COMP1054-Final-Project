@@ -1,42 +1,69 @@
 /* --------------------------------COLORS---------------------------------
-DARKEST
-    #0c202c--dark navy blue
-    #194158--navy blue
-    #256284--light navy blue
-    #3283b0--blue
-    #4e9fcc--light blue
-    #7ab7d9--ski blue
-    #a6cfe5--light ski blue
-    #d2e7f2--almost white
+DARKEST */
+:root {
+    --dark-navy-blue: #0c202c;
+    --navy-blue: #194158;
+    --light-navy-blue: #256284;
+    --blue: #3283b0;
+    --light-blue: #4e9fcc;
+    --ski-blue: #7ab7d9;
+    --light-ski-blue: #a6cfe5;
+    --almost-white: #d2e7f2;
+    --white: #f2f2f2;
+}
+/*
 LIGHTEST
-*/
 
-/* --------------------------------FONTS---------------------------------
-Knewave (Bold) (sparingly use this)
-Racing Sans One (Bold) (same)
+ --------------------------------FONTS---------------------------------
+ */
+.knewave-regular {
+  font-family: "Knewave", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-*/
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, a, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.racing-sans-one-regular {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.joti-one-regular {
+font-family: "Joti One", serif;
+font-weight: 400;
+font-style: normal;
 }
 
 /* General body styling */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #0c202c; /* dark navy blue */
-    background-color: #d2e7f2; /* almost white */
-    padding: 20px;
+    color: var(--dark-navy-blue);
+    background-color: var(--light-ski-blue);
 }
 
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light-blue);
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px 0 ;
+}
 /* Header styling */
 header {
-    background: #0c202c; /* dark navy blue */
-    color: #d2e7f2; /* almost white */
+    background: var(--dark-navy-blue); /* dark navy blue */
+    color: var(--almost-white); /* almost white */
     padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
 }
 
 .headLogo img {
@@ -57,35 +84,43 @@ header {
 
 .HeadNav ul li {
     margin: 0 10px;
+    font: 1.2rem sans-serif;
 }
 
 .HeadNav ul li a {
-    color: #d2e7f2; /* almost white */
+    color: var(--almost-white); 
     text-decoration: none;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 /* Hero section styling */
 .hero {
-    background: url('img/hero.jpg') no-repeat center center/cover;
-    color: #d2e7f2; /* almost white */
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px; 
     text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 20px;
+    background-attachment: fixed
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.mask {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1{
+    font-size: 4em;
+    font-family: 'Joti One', sans-serif;
+    color: var(--dark-navy-blue);
+    margin-top: 0;
 }
 
 .hero p {
     font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+    margin-bottom: 20px;
 }
 /* Featured products section */
 .featuredProducts {
@@ -97,9 +132,11 @@ main {
 
 .featuredProducts h2 {
     margin-bottom: 20px;
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: .2em;
     font-size: 1.8rem;
     text-align: center;
-    color: #0c202c; /* dark navy blue */
+    color: var(--dark-navy-blue);
 }
 
 .productGrid {
@@ -109,8 +146,8 @@ main {
 }
 
 .productGrid .wizardStick, .productGrid .powReaper, .productGrid .mindBender {
-    background: #d2e7f2; /* almost white */
-    border: 1px solid #a6cfe5; /* light ski blue */
+    background: var(--almost-white);
+    border: 1px solid var(--light-ski-blue);
     border-radius: 8px;
     padding: 20px;
     text-align: center;
@@ -122,16 +159,541 @@ main {
     max-width: 100%;
     height: 450px;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 .product-details h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #0c202c; /* dark navy blue */
+    color: var(--dark-navy-blue); 
 }
 
 .product-details p {
     font-size: 1rem;
-    color: #256284; /* light navy blue */
+    color: var(--light-navy-blue);
     margin-bottom: 10px;
+}
+/* About section */
+.about {
+    background: var(--almost-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: .2em;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+    margin-bottom: 20px;
+}
+
+.about p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    background: var(--navy-blue);
+    color: var(--almost-white); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--blue);
+}
+/* Newsletter section */
+.newsLetter {
+    background-image: url('../img/Groomed_Ski_Run.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.newsLetter h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: .2em;
+}
+
+.newsLetter p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+    margin-bottom: 20px;
+}
+
+.newsLetter input[type="email"] {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--light-ski-blue);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+}
+
+.newsLetter button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    background: var(--navy-blue);
+    color: var(--almost-white); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.newsLetter button:hover {
+    background: var(--blue);
+}
+/* Footer section */
+footer {
+    background-color: var(--dark-navy-blue);
+    color: var(--almost-white);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: -20px;
+}
+.ft-logo img {
+    width: auto;
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* ----- about us page ----- */
+.about-header {
+    margin-bottom: auto;
+}
+
+.about-main-content {
+    background: var(--almost-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content {
+    margin-bottom: 20px;
+}
+
+.about-us-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    font-family: 'Knewave', serif;
+}
+.about-us-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: .2em;
+}
+.about-us-content p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    margin-bottom: 20px;
+}
+
+.about-us-content p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--light-navy-blue);
+}
+
+.our-story, .our-products, .expert-advice, .services, .community-engagement, .visit-us {
+    margin-bottom: 5px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background: var(--almost-white);
+}
+
+/* ----- contact us page ----- */
+.contact-page {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: var(--almost-white);
+}
+
+.contact-text h1{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--dark-navy-blue);
+    margin-bottom: 20px;
+}
+
+.contact-pg-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-pg-form label {
+    font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+    margin-bottom: 5px;
+}
+
+.contact-pg-form input[type="text"],
+.contact-pg-form input[type="email"],
+.contact-pg-form textarea {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--light-ski-blue);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--dark-navy-blue);
+}
+
+.contact-pg-form textarea {
+    resize: vertical;
+}
+
+.contact-pg-form button {
+    background: var(--navy-blue);
+    color: var(--almost-white); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact-pg-form button:hover {
+    background: var(--blue);
+}
+
+.contact-footer {
+    margin-top: -20px;
+}
+
+/* ---- Wizard Stick product page ---- */
+.wiz-stk-title {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-ski-blue);
+    color: var(--dark-navy-blue);
+}
+
+.wiz-stk-title h1 {
+    font-size: 2.5em;
+    font-family: 'Knewave', serif;
+}
+
+.wiz-stk-title p {
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+.wiz-stk-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--almost-white);
+}
+
+.wiz-img {
+    flex: 1;
+}
+
+.wiz-img img {
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.wiz-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wiz-stk-details {
+    flex: 1;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--dark-navy-blue);
+}
+
+.wiz-stk-details .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.btn-cart {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-cart:hover {
+    background-color: var(--dark-navy-blue);
+}
+
+.wiz-stk-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: var(--dark-navy-blue);
+}
+
+.wiz-stk-camber {
+    text-align: center;
+    padding: 20px;
+}
+
+.wiz-stk-camber img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Pow Reaper product page ---- */
+.pow-rip-header {
+    margin-bottom: auto;
+}
+
+.pow-rip-background {
+    background-image: url('../img/Groomed_Ski_Run.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.pow-rip-product {
+    background-color: var(--almost-white);
+    padding: 40px 20px;
+    border-radius: 10px;
+    color: var(--white);
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.pow-rip-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pow-rip-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--navy-blue);
+    font-family: 'Knewave', serif;
+}
+
+.pow-rip-title p {
+    font-size: 1.2em;
+    color: var(--light-navy-blue);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.pow-rip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pow-rip-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pow-rip-image:hover img {
+    transform: scale(1.22);
+    transition: transform 0.5s ease-in-out;
+}
+
+.pow-rip-details {
+    text-align: center;
+    color: var(--light-navy-blue);
+}
+
+.pow-rip-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pow-rip-profile {
+    text-align: center;
+    color: var(--light-navy-blue);
+}
+.pow-rip-profile img {
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pow-rip-btn-cart {
+    background-color: var(--ski-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pow-rip-btn-cart:hover {
+    background-color: var(--dark-navy-blue);
+}
+
+/*------K2 Mindbender product page------*/
+.mind-ski-product {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: var(--white);
+    border-left: 6px solid var(--blue);
+    border-bottom: 6px solid var(--blue);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.mind-ski-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mind-ski-title h1 {
+    font-size: 2.5em;
+    color: var(--highlight);
+    margin-bottom: 10px;
+    font-family: 'Racing Sans One', sans-serif;
+    letter-spacing: 2px;
+}
+
+.mind-ski-title p {
+    font-size: 1.2em;
+    color: var(--navy-blue);
+}
+
+.mind-ski-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mind-ski-image img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mind-ski-details {
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+.mind-ski-price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--highlight);
+    margin-bottom: 15px;
+}
+
+.mind-ski-details p {
+    margin-bottom: 15px;
+    color: var(--navy-blue);
+}
+
+.mind-ski-btn-add-to-cart {
+    background-color: var(--ski-blue);
+    color: var(--white);
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.mind-ski-btn-add-to-cart:hover {
+    background-color: var(--blue);
+}
+.mind-ski-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.mind-ski-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mind-ski-gallery img:hover {
+    transform: scale(1.5);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
